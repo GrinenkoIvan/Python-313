@@ -1336,6 +1336,9 @@ from random import randint
 # print("6 =", first.count(6))
 # print("1 =", first.count(1))
 
-print("Вносим изменения")
+# print("Вносим изменения")
+
+print("Склонированный репозиторий")
+
 
 
