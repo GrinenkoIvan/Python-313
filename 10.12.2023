@@ -1,0 +1,7 @@
+numbers_a = (2, 5, 3, 5, 2, 3, 6, 5, 1)
+
+print("2 =", numbers_a.count(2))
+print("5 =", numbers_a.count(5))
+print("3 =",numbers_a.count(3))
+print("6 =", numbers_a.count(6))
+print("1 =", numbers_a.count(1))

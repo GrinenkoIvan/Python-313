@@ -1233,12 +1233,12 @@ from random import randint
 # print(t1)
 # print(t2)
 # t3 = t1 + t2
-# # print(t3.count('l'))
-# # if 'e' in t3:
-# #     print(t3.index('e'))
+# print(t3.count('l'))
+# if 'e' in t3:
+#     print(t3.index('e'))
 #
 # for i in t3:
-#     print(i, end=" ")
+#     print(i, end="")
 
 # задача-----------
 
@@ -1307,5 +1307,35 @@ from random import randint
 #     for city in cities:
 #         city_name, city_population = city
 #         print("\tГород", city_name, "Город", city_population)
+
+
+  # ---------- Домашняя работа от 09.12.2023, случайные списки кортежа от 0 до 5 и от -5 до 0,
+# сложить оба картежа и вывести в ответ сколько выпадает случайных чисел 0.-------------------
+# import random
+# initial = tuple([random.randint(0, 5) for _ in range(10)])
+# print(initial)
+# other = tuple([random.randint(-5, 0) for _ in range(10)])
+# print(other)
+# upshot = initial + other
+# print(upshot)
+# print("0 = ", upshot.count(0))
+
+
+  # -------------Домашняя работа от 10.12.2023 , вывести статистику чачтотности чисел в кортеже----
+
+# num = str(253523651)
+# print(num)
+# first = tuple(num)
+# print(first)
+# print(first.count(2))
+
+
+# print("2 =", first.count(2))
+# print("5 =", first.count(5))
+# print("3 =", first.count(3))
+# print("6 =", first.count(6))
+# print("1 =", first.count(1))
+
+print("Вносим изменения")
 
 
