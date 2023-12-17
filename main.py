@@ -1309,7 +1309,7 @@ from random import randint
 #         print("\tГород", city_name, "Город", city_population)
 
 
-  # ---------- Домашняя работа от 09.12.2023, случайные списки кортежа от 0 до 5 и от -5 до 0,
+# ---------- Домашняя работа от 09.12.2023, случайные списки кортежа от 0 до 5 и от -5 до 0,
 # сложить оба картежа и вывести в ответ сколько выпадает случайных чисел 0.-------------------
 # import random
 # initial = tuple([random.randint(0, 5) for _ in range(10)])
@@ -1321,7 +1321,7 @@ from random import randint
 # print("0 = ", upshot.count(0))
 
 
-  # -------------Домашняя работа от 10.12.2023 , вывести статистику чачтотности чисел в кортеже----
+# -------------Домашняя работа от 10.12.2023 , вывести статистику чачтотности чисел в кортеже----
 
 # num = str(253523651)
 # print(num)
@@ -1338,7 +1338,152 @@ from random import randint
 
 # print("Вносим изменения")
 
-print("Склонированный репозиторий")
+# print("Склонированный репозиторий")
 
 
+# 16.12.2023   --------------------------------------------------
+
+# Множество  (set)
+
+# s = {"banana", "apple", "orange", "banana", "apple"}
+# print(s)
+# print(type(s))
+# print(len(s))
+
+# c = ["red", "blue", "green", "red"]
+#
+# a = set(c)
+# print(a, type(a))
+
+# mas = [1, 2, 3, 2, 3, 4, 4, 5]
+#
+# s = {x for x in mas if x % 2 == 0}
+# print(s)
+
+# def to_set(element):
+#     st = set(element)
+#     return st, len(st)
+#
+# print(to_set("Я обычная строка"))
+# print(to_set([4, 5, 4, 6, 2, 9, 11, 3, 4, 2]))
+
+# t = {"red", "green", "blue"}
+# # print("green" not in t)
+#
+# for i in t:
+#     print(i)
+
+# r = ['ab_1', 'ac_2', 'bc_1', 'bc_2']
+# # a = [i for i in r if 'a' not in i]
+# # a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r if i[1] == 'c']
+# print(a)
+
+# a = {"Tom", "Bob", "Alice"}
+# print(a)
+# a.add("Anna")
+# print(a)
+# a.remove("Anna") #  Ann1 при обращении к несуществующему элементу - ошибка  KeyError
+# print(a)
+# user = "Tom"
+# if user in a:
+#     a.remove(user)
+# print(a)
+
+# a.discard("Anna")
+# print(a)
+
+# a.pop()
+# print(a)
+
+# n = a.pop()
+# print(n)
+# print(a)
+# a.clear()
+# print(a)
+
+# a = {0, 1, 2, 3}
+# b = {4, 3, 2, 1}
+# # c = a.union(b)
+# # c = a | b
+# # a |= b
+# # c = a & b
+# # print(c)
+# # a &= b
+# # c = a ^ b
+# # print(c)
+# a ^= b
+# print(a)
+
+# s1 = {1, 2}
+# s2 = {3}
+# s3 = {4, 5}
+# s4 = {3, 2, 6}
+# s5 = {6}
+# s6 = {7, 8}
+# s7 = {9, 8}
+#
+# # s = s1.union(s2, s3, s4, s5, s6, s7)
+# s = s1 | s2 | s3 | s4 | s5 | s6 | s7
+# print(s)
+# count = len(s)
+# print("Count", count)
+# print("Min", min(s))
+# print("Max", max(s))
+# print("Sum", sum(s))
+
+# s1 = set("Hello")
+# s2 = set("How are you")
+# a = s1 & s2
+# print(a)
+# for i in a:
+#     print(i, end=" ")
+
+# drawing = {'Марина', 'Женя', 'Света'}
+# music = {'Костя', 'Женя', 'Илья'}
+#
+# # a = drawing.union(music)
+# # print(a)
+# one_hobby = drawing ^ music
+# print("Один кружок: ", one_hobby)
+#
+# both_hobby = drawing & music
+# print("Оба кружка: ", both_hobby)
+#
+# # drawing = drawing - both_hobby
+# drawing -= both_hobby
+# print("Кружок рисования: ", drawing)
+
+# a = {0, 1, 2, 3, 4}
+# b = {3, 2, 1}
+# print(a <= b)
+# print(a >= b)
+
+# Тип frozenset  замороженный сет
+
+# s = frozenset([1, 2, 3, 4, 5])
+# print(s)
+# print(type(s))
+# a = frozenset({"hello", "world"})
+# print(a)
+
+# a = [0, 1, 2, 3, 4, 5, 6, 8, 4, 7, 5, 1, 2, 5, 4, 88, 9]
+# print(a)
+# b = set(a)
+# print(b)
+# a = tuple(b)
+# print(a)
+
+
+  # Словарь --------------
+
+
+
+s = input("Введите строку: ")
+count = 0
+str_1 = set("уеэоаяюи")
+for str_2 in s:
+    if str_2 in str_1:
+        count += 1
+print("Количество гласных равно: ",(count))
 
