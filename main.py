@@ -1935,7 +1935,6 @@ from random import randint
 # print(sum(lst))
 
 
-
 # import builtins
 #
 # name = dir(builtins)
@@ -1944,6 +1943,344 @@ from random import randint
 #     print(t)
 #     print(type(t))
 #     print(dir(t))
+
+
+# n = int(input("Введите количество студентов: "))
+#
+# students = {}
+#
+#
+# for name in range(1, 5):
+#
+#     name, module, ball = input().replace(' (', '#').replace('): ', '#').split('#')
+#     ball = int(ball)
+#     if name in students:
+#         students[name][module] = students[name].get(module, 0) + ball
+#     else:
+#         students[name] = {module: ball}
+#
+# for key in students:
+#     if len(students[key]) == 5 and sum(students[key].values()) >= 75:
+#         print(key)
+
+#
+# from typing import Union
+#
+#
+# def fill_data() -> list:
+#     """Заполняет базу данных студентов"""
+#     global students_count
+#     # Ввод пользователем количества студентов.
+#     students_count = int(input('Количество студентов: '))
+#     # Заполнение базы студентов.
+#     data: list[dict[str: Union[str, int]]] = [
+#         {
+#             'id': i,
+#             'Имя': input(f'Имя {i}-го студента: '),
+#             'Фамилия': input(f'Фамилия {i}-го студента: '),
+#             'Балл': int(input('Балл: '))
+#  } for i in range(1, students_count + 1)
+#     ]
+#
+#     return data
+#
+#
+# def get_average_grade(data: list[dict[str: Union[str, int]]]) -> Union[int, float]:
+#     """Функция подсчета среднего бала студентов."""
+#     grades: list[int] = [student['Балл'] for student in data]
+#     return round(sum(grades) / students_count)
+#
+#
+# def print_report(data: list[dict[str: Union[str, int]]]):
+#     """Функция вывода на печать запроса к базе данных."""
+#     average_grade: Union[int, float] = get_average_grade(data)
+#     print(f'Средний бал: {average_grade}. Студентов с балом выше среднего:')
+#     for student in data:
+#         if student['Балл'] > average_grade:
+#             print(student['Имя'])
+#
+#
+# if __name__ == '__main__':
+# #     # Авто тест.
+# #     # Глобальная переменная для хранения количества студентов.
+# #     students_count: int = 5
+# #     students: list[dict[str: Union[str, int]]] = [
+# #  {'id': 1, 'Имя': 'Игорь', 'Фамилия': 'Исаев', 'Балл': 12},
+# #  {'id': 2, 'Имя': 'Валентин', 'Фамилия': 'Киреев', 'Балл': 7},
+# #  {'id': 3, 'Имя': 'Виктор', 'Фамилия': 'Степанов', 'Балл': 4},
+# #  {'id': 4, 'Имя': 'Григорий', 'Фамилия': 'Иванов', 'Балл': 9},
+# #  {'id': 5, 'Имя': 'Дмитрий', 'Фамилия': 'Кузнецов', 'Балл': 6}
+# #     ]
+#
+#     # Для ручного заполнения.
+#     # Глобальная переменная для хранения количества студентов.
+#     students_count: int
+#     students = fill_data()
+#
+#     print_report(students)
+
+
+# 30.12.2023-------------------
+
+# def outer(who):
+#      a = 5
+#      def inner():
+#          print("Hello", who)
+#
+#      inner()
+#
+# outer()
+
+
+# def fun1():
+#     a=6
+#
+#     def fun2(b):
+#         a=4
+#         print(a + b)
+#
+#     print("a", a)
+#     fun2(4)
+#
+#
+# fun1()
+
+
+# x = 25
+# t = 0
+#
+# def fn():
+#     global t
+#     a = 30
+#
+#     def inner():
+#         nonlocal a
+#         a = 35
+#         print("a", a)
+#
+#     inner()
+#     t = a
+#
+#
+# fn()
+# c = x + t
+# print(c)
+
+
+# def fn1():
+#     x = 25 # 2
+#
+#     def fn2():
+#         x = 33 # 4
+#
+#         def fn3():
+#             nonlocal x
+#             x = 55 # 6
+#
+#             # print("fn3.x =", x) # 9
+#         fn3() # 5
+#         print("fn2.x =", x) # 7
+#
+#     fn2() # 3
+#     print("fn1.x =", x) # 8
+#
+# fn1() # 1
+
+
+# def outer(a1,b1,a2,d2):
+#     a = 0
+#     b = 0
+#
+#     def inner():
+#         nonlocal a, b
+#         a = a1 + a2
+#         b = b1 + d2
+#
+#     inner()
+#     return [a,b]
+#
+# res = outer(2,3,-1,4)
+# print(res) # [список [1, 7 ]]
+
+
+# Замыкание --------------------------------
+
+# def outer(n):
+#     def inner(x):
+#         return x + n
+#
+#     return inner
+#
+#
+# item1 = outer(5)
+# print(item1(10))
+#
+# item2 = outer(5)
+# print(item2(1))
+
+
+# def func1():
+#     a = 1
+#     b = 'line'
+#     c = [1,2,3]
+#
+#     def func2():
+#         nonlocal a, b
+#         c.append(4)
+#         a += 1
+#         b += "_new"
+#         return a, b, c
+#
+#     return func2
+#
+#
+# func = func1()
+# print(func())
+
+
+# def func(city):
+#     s = 0
+#     def inner():
+#         nonlocal s
+#         s += 1
+#         print(city, s)
+#     return inner
+# res1 = func('Moscow')
+# res1()
+# res1()
+# res2 = func('sochi')
+# res2()
+# res2()
+# res2()
+# res1()
+# res3 = func('Kyev')
+# res3()
+# res3()
+# res3()
+
+# lambda(анонимная функция)
+
+
+# print((lambda x, y: x + y)(1, 2))
+#
+# func = lambda x, y: x + y
+# print(func(1, 2))
+# print(func('a', 'b'))
+
+
+# print((lambda x, y: x ** 2 + y ** 2)(2, 5))
+# print((lambda x, y = 5: x ** 2 + y ** 2)(2, ))
+# print((lambda x = 2, y = 5: x ** 2 + y ** 2)())
+# print((lambda x = 2, y = 5: x ** 2 + y ** 2)(10, 20))
+# print((lambda x = 2, y = 5: x ** 2 + y ** 2)(y = 10))
+
+
+# print((lambda *args: args)(1, 2, 3, 4, 5))
+
+
+# y = (
+#     lambda x: x * 2,
+#     lambda x: x * 3,
+#     lambda x: x * 4,
+# )
+# for i in y:
+#     print(i("abc__"))
+#
+
+
+# def outer(n):
+#     def inner(x):
+#         return x + n
+#
+#     return inner
+#
+#
+# f = outer(5)
+# print(f(10))
+#
+#
+# def outer1(n):
+#     return lambda x: x + n
+#
+#
+# f1 = outer1(5)
+# print(f1(10))
+#
+# outer2 = lambda n: lambda x: x + n
+#
+# f2 = outer2(5)
+# print(f2(10))
+#
+# print((lambda n: lambda x: x + n)(5)(10))
+
+
+# print((lambda x: lambda y: lambda z: x + y + z) (2)(4)( 6))
+
+
+# def func(item):
+#     return item[1]
+
+
+# d = {'b':3, 'c': 1, 'a': 2}
+# print(d)
+# lst = list(d.items())
+# print(lst)
+# lst.sort(key=lambda i: i[1])
+# # lst.sort(key=func)
+# print(lst)
+# d1 = dict(lst)
+# print(d1)
+
+
+# player = [
+#     {'name':'Anton', 'last name': 'Bipykov', 'rating': 9},
+#     {'name':'Aleksey', 'last name': 'Bodny', 'rating': 10},
+#     {'name':'Fedor', 'last name': 'Sidorov', 'rating': 4},
+#     {'name':'Mihail', 'last name': 'Semenov', 'rating': 6},
+# ]
+# res = sorted(player, key=lambda i: i['last name'])
+# print(res)
+# res = sorted(player, key=lambda i: i['rating'], reverse=True)
+# print(res)
+
+
+# a =[
+#     lambda x, y: x + y,
+#     lambda x, y: x - y,
+#     lambda x, y: x * y,
+#     lambda x, y: x / y,
+#     lambda x, y: x // y,
+#     lambda x, y: x % y,
+# ]
+#
+# print(a[0](5, 2))
+# print(a[1](5, 2))
+# print(a[2](5, 2))
+# print(a[3](5, 2))
+# print(a[4](5, 2))
+# print(a[5](5, 2))
+
+
+# d = {
+#     1: lambda: print("Понедельник"),
+#     2: lambda: print("Вторник"),
+#     3: lambda: print("Среда"),
+#     4: lambda: print("Четверг"),
+#     5: lambda: print("Пятница"),
+#     6: lambda: print("Суббота"),
+#     7: lambda: print("Воскресенье"),
+# }
+#
+# d[6]()
+
+
+# print((lambda a, b: a if a > b else b)(15, 23))
+
+
+# print((lambda a, b, c: a if (a < b and a < c) else (b if b < c else c))(18, 19, 17))
+
+
+
 
 
 
