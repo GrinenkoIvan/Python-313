@@ -3013,4 +3013,6 @@
 # set_param(7)
 # set_param(5, "*")
 
+git branch -d name-of-branch-to-remove;
+
 
