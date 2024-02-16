@@ -3013,6 +3013,1675 @@
 # set_param(7)
 # set_param(5, "*")
 
+# 16.12.2023   --------------------------------------------------
 
+# Множество  (set)
+
+# s = {"banana", "apple", "orange", "banana", "apple"}
+# print(s)
+# print(type(s))
+# print(len(s))
+
+# c = ["red", "blue", "green", "red"]
+#
+# a = set(c)
+# print(a, type(a))
+
+# mas = [1, 2, 3, 2, 3, 4, 4, 5]
+#
+# s = {x for x in mas if x % 2 == 0}
+# print(s)
+
+# def to_set(element):
+#     st = set(element)
+#     return st, len(st)
+#
+# print(to_set("Я обычная строка"))
+# print(to_set([4, 5, 4, 6, 2, 9, 11, 3, 4, 2]))
+
+# t = {"red", "green", "blue"}
+# # print("green" not in t)
+#
+# for i in t:
+#     print(i)
+
+# r = ['ab_1', 'ac_2', 'bc_1', 'bc_2']
+# # a = [i for i in r if 'a' not in i]
+# # a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r if i[1] == 'c']
+# print(a)
+
+# a = {"Tom", "Bob", "Alice"}
+# print(a)
+# a.add("Anna")
+# print(a)
+# a.remove("Anna") #  Ann1 при обращении к несуществующему элементу - ошибка  KeyError
+# print(a)
+# user = "Tom"
+# if user in a:
+#     a.remove(user)
+# print(a)
+
+# a.discard("Anna")
+# print(a)
+
+# a.pop()
+# print(a)
+
+# n = a.pop()
+# print(n)
+# print(a)
+# a.clear()
+# print(a)
+
+# a = {0, 1, 2, 3}
+# b = {4, 3, 2, 1}
+# # c = a.union(b)
+# # c = a | b
+# # a |= b
+# # c = a & b
+# # print(c)
+# # a &= b
+# # c = a ^ b
+# # print(c)
+# a ^= b
+# print(a)
+
+# s1 = {1, 2}
+# s2 = {3}
+# s3 = {4, 5}
+# s4 = {3, 2, 6}
+# s5 = {6}
+# s6 = {7, 8}
+# s7 = {9, 8}
+#
+# # s = s1.union(s2, s3, s4, s5, s6, s7)
+# s = s1 | s2 | s3 | s4 | s5 | s6 | s7
+# print(s)
+# count = len(s)
+# print("Count", count)
+# print("Min", min(s))
+# print("Max", max(s))
+# print("Sum", sum(s))
+
+# s1 = set("Hello")
+# s2 = set("How are you")
+# a = s1 & s2
+# print(a)
+# for i in a:
+#     print(i, end=" ")
+
+# drawing = {'Марина', 'Женя', 'Света'}
+# music = {'Костя', 'Женя', 'Илья'}
+#
+# # a = drawing.union(music)
+# # print(a)
+# one_hobby = drawing ^ music
+# print("Один кружок: ", one_hobby)
+#
+# both_hobby = drawing & music
+# print("Оба кружка: ", both_hobby)
+#
+# # drawing = drawing - both_hobby
+# drawing -= both_hobby
+# print("Кружок рисования: ", drawing)
+
+# a = {0, 1, 2, 3, 4}
+# b = {3, 2, 1}
+# print(a <= b)
+# print(a >= b)
+
+# Тип frozenset  замороженный сет
+
+# s = frozenset([1, 2, 3, 4, 5])
+# print(s)
+# print(type(s))
+# a = frozenset({"hello", "world"})
+# print(a)
+
+# a = [0, 1, 2, 3, 4, 5, 6, 8, 4, 7, 5, 1, 2, 5, 4, 88, 9]
+# print(a)
+# b = set(a)
+# print(b)
+# a = tuple(b)
+# print(a)
+
+# s = input("Введите строку: ")
+# count = 0
+# str_1 = set("уеэоаяюи")
+# for str_2 in s:
+#     if str_2 in str_1:
+#         count += 1
+# print("Количество гласных равно: ",(count))
+
+
+# Словарь 'dict'--------------17.12.2023
+
+# lst = [1, 2, 3]
+# d = {'one': 1, 'two': 2, 'three': 3}
+# lst[0] = 10
+# print(lst[0])
+# d['one'] = 10
+# print(d['one'])
+
+# d = {}
+# print(d)
+# print(type(d))
+
+# d = {0: 1, 'one': 45,}
+
+# d = {a: a ** 2 for a in range(7)}
+# print(d)
+
+# d = {'one': 1, 'two': 2, 'four': 4}
+# key = "four1"
+#
+# # if key in d:
+# #     del d[key]
+#
+# try:
+#     del d[key]
+# except KeyError:
+#     print("Элемента с ключом " + key + " нет в словаре")
+#
+# # print('one1' in d)
+# for i in d:
+#     print(i, "->", d[i])
+
+# Задача--------
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# com = 1
+# for key in d:
+#     com *= d[key]
+# print('Произведение :', com)
+
+
+# Задача-----------------------
+# d = dict()  вывод варианта 1
+# d[1] = input("-> ")
+# d[2] = input("-> ")
+# d[3] = input("-> ")
+# d[4] = input("-> ")
+# d = {i: input("-> ") for i in range(1, 5)}  # вариант 2
+#
+# print(d)
+# dislike = int(input("Введите элемент исключить "))
+# del d[dislike]
+# print(d)
+
+# myDict = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# print(len(myDict))
+# print(min(myDict))
+# print(max(myDict))
+
+#  Задача---------------------
+
+# goods = {
+#     '1': ['Core-i3-4330', 9, 4500],
+#     '2': ['Core-i5-4670', 3, 8500],
+#     '3': ['AMD FX=6300', 6, 3700],
+#     '4': ['Pentium G3220', 8, 2100],
+#     '5': ['Core-i5-3450', 5, 6400]
+# }
+# for i in goods:
+#     print(i, ")", goods[i][0], " - ", goods[i][1], "шт. по ", goods[i][2], "руб", sep="")
+#
+# while True:
+#     n = input('№: ')
+#     if n != '0':
+#         if n in goods:
+#             qty = int(input('Количество: '))
+#             goods[n][1] += qty
+#         else:
+#             print('Некорректный номер товара! Х')
+#     else:
+#         break
+# for i in goods:
+#     print(i, ")", goods[i][0], " - ", goods[i][1], "шт. по ", goods[i][2], "руб", sep="")
+#
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+#
+# print(d.keys()) # список ключей
+# print(d.values()) # список значений
+# print(d.items()) # список ключей и значений
+#
+# # for i, j in d.items():
+# #     print(i, "->", j)
+#
+# print(list(d.values()))
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+#
+# d2 = d.copy()
+#
+# print("d:", d, id(d))
+# print("d2:", d2, id(d2))
+#
+# d2['a'] = 5
+# d['e'] = 7
+#
+# print("d:", d, id(d))
+# print("d2:", d2, id(d2))
+#
+# d.clear()
+# print("d:", d, id(d))
+# print("d2:", d2, id(d2))
+
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+
+# print(d['e'])
+# value = d.get('b', "Такого ключа не существует")
+# print(value)
+
+# item = d.popitem()
+# print(item)
+# print(d)
+
+# d_dict = {'name': 'Kellu', 'age': 25, 'salary': 8000, 'city': 'New York'}
+# print("Словарь: ", d_dict)
+# d_dict.pop('age')
+# d_dict.pop('city')
+# print(d_dict)
+# f = d_dict.update('age')
+# i = ['age', 'city']
+# for key in i:
+#     del d_dict[key]
+# print(str(d_dict))
+#
+# print("Новый словарь: ", d_dict)
+
+# item = d_dict.popitem()
+# item_1 = d_dict.pop('age')
+# print(item,item_1)
+# print(d_dict)
+
+
+# 23.12.2023--------------------------------
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+#
+# d1 = {'r': 7, 'q': 40}
+# d.update(d1)
+# # d2 = {'a': 20, 'b': 9}
+# d2 =[('a', 20), ('b', 9)]
+# d.update(d2)
+# print(d)
+
+
+# x = {'a': 1, 'b': 2}
+# y = {'b': 3, 'c': 4}
+# # new_disc = x.copy()
+# # new_disc.update(y) или--
+#
+# new_disc = x | y
+#
+# print(new_disc)   работает
+
+
+# a = {
+#     'first':{
+#         1:'one',
+#         2:'two',
+#         3:'three'
+#     },
+#     'second':{
+#         4:'four',
+#         5:'five'
+#     }
+# }
+# print(a)
+# for x in a:
+#     print(x)
+#     for y in a[x]:
+#         print("\t", y, ": ", a[x][y], sep="")  # работает
+
+
+# sales = {"John": {"N": 3056, "S": 8463, "E": 8441, "W": 2694},
+#          "Tom": {"N": 4832, "S": 6786, "E": 4737, "W": 3612},
+#          "Anne": {"N": 5239, "S": 4802, "E": 5820, "W": 1859},
+#          "Fiona": {"N": 3904, "S": 3645, "E": 8821, "W": 2451}}
+#
+# for x in sales:
+#     print(x)
+#     for y in sales[x]:
+#         print("\t", y, ": ", sales[x][y], sep="")
+#
+# person = input("Имя: ")
+# region = input("Регион: ")
+# print(sales[person][region])
+# new_date = int(input("Новое значение: "))
+# sales[person][region] = new_date
+# print(sales[person])  # работает  и можно добавить ниже обработку ошибок
+#
+# try:
+#     person = input('Введите имя: ')
+#     saler = sales[person]
+#     try:
+#         region = input('Введите регион: ')
+#         new_data = int(input('Введите новое значение: '))
+#         sales[person][region] = new_data
+#         print(sales[person])
+#     except (KeyError, ValueError):
+#         print('Такого региона нет')
+# except KeyError:
+#     print('Такого продавца нет.')
+
+
+# d = {"N": 3056, "S": 8463, "E": 8441, "W": 2694}
+# new_d = {value: key for key, value in d.items()}
+# print(new_d)
+
+
+# d = {"N": 1, "S": 2, "E": 3, "W": 4}
+# # new_d = {k: v for k, v in d.items() if v <= 2}
+# # print(new_d)
+#
+# for i in range(2):
+#     print('key:', list(d.items())[i][0], 'value:', list(d.items())[i][1])
+
+# d = {'один': 1, 'два': 2, 'три': 3, 'четыре': 4}
+# c = list(d)
+# for key in c[:2]:
+#     print(f'{key}: {d[key]}')
+
+# Перемена_____________---------------
+
+# d = {"N": 1, "S": 2, "E": 3, "W": 4}
+# value = list(d.items())
+# print(value)
+#
+# value = list(d)
+# print(value)
+
+
+# a = ["one", 1, 2, 3, "two", 10, 20, "three", 15, 36, 60, "four", -20]
+#
+# d = {}
+# current_key = ""
+#
+# for item in a:
+#
+#     if type(item) is str:
+#         d[item] = []
+#         current_key = item
+#     else:
+#         d[current_key].append(item)
+#
+# print(d)  # задача работает
+
+# d = dict(zip([1,2,3], ['one','two','three']))
+# print(d)
+#
+# a = [1,2,3]
+# b = ['one','two','three']
+# f = {k: v for k, v in zip(a, b)}
+# print(f)
+
+# a = [1, 2, 3]
+# b = ['one', 'two', 'three']
+# # c = tuple(zip(a, b))
+# # c = list(zip(a, b))
+# # c = set(zip(a, b))
+# c = dict(zip(a, b))
+# print(c)
+
+
+# d_one = {'name':"Igor", "Last_name": "Petrov", "job": "Consultant"}
+# d_two = {'name': "Irina", "Last_name": "Irisova", "job": "Manager"}
+# for (k1, v1), (k2, v2) in zip(d_one.items(), d_two.items()):
+#     print(k1, "->", v1)
+#     print(k2, "->", v2)  # работает
+
+
+# d = ([(1, 'one'), (2, 'two'), (3, 'three')])
+# a, b = zip(*d)
+# print(a)
+# print(b)
+
+
+# a = ('one', 'two', 'three')
+# b = [1, 2, 3,]
+# d = dict(zip(a, b))
+# print(d)
+# s = sorted(d.items())
+# print(s)
+# print(dict(s))
+
+
+# one = {'apple': 0.45, 'orange': 0.35}
+# two = {'pepper': 0.2, 'onion': 0.55}
+# print({**one, **two})  #{'apple': 0.45, 'orange': 0.35, 'pepper': 0.2, 'onion': 0.55}
+# for k, v in {**two, **one}.items():
+#     print(k, "->", v)
+
+
+# data = ["red", "green", "blue"]
+# num = 0
+# for val in data:
+#     print(num, ") ", val, sep="")
+#     num += 1
+# print()
+# for num, val in enumerate(data, start=10):
+#     print(num, ") ", val, sep="")
+
+# Домашняя работа
+
+# month = ["January", "February", "Match"]
+# total_sales = [52000.00, 51000.00, 48000.00]
+# prod_cost = [46800.00, 45900.00, 43200.00]
+# for sales, costs, m in zip(total_sales, prod_cost, month):
+#     profit = sales - costs
+#     print("Чистая прибыль в :", m, "=", profit)
+
+
+# 24.12.2023 -----------------------------------------------------
+
+# a = [1, 2, 3]
+# b = [a, 4, 5, 6]
+# print(b)
+# c = [*a, 4, 5, 6]
+# print(c)
+
+# def func(*args):
+#     # print(args)
+#     return args
+#
+#
+# print(func(2))
+# print(func(2, 3, 4, "abc"))
+# print(func())
+
+# def summa(*params):
+#     res = 0
+#     for i in params:
+#         res += i
+#     return res
+#
+#
+# print(summa(1, 2, 3, 4, 5, 6, 7, 8, 9))
+# print(summa(3, 4, 5))
+
+# Задача-----
+# def to_dict(*args):
+#     return {element: element for element in args}
+#
+#
+# print(to_dict(1, 2, 3, 4))
+# print(to_dict("grey", (2, 17), 3.11, -4))  # работает\
+
+# Задача
+# def func(*args):
+#     midle = sum(args)/len(args)
+#     print(midle)
+#     res = []
+#     for element in args:
+#         if element < midle:
+#             res.append(element)
+#     return res
+# first = func(1, 2, 3, 4, 5, 6, 7, 8, 9)
+# print(first)
+# second = func(3, 6, 1, 9, 5)
+# print(second) # работает
+
+# def func(a, *args):
+#     return a, args
+#
+#
+# print(func(1))
+# print(func(1, 2, 3, 4, 5, 6, 7, ))
+
+
+# def print_score(student, *scores):
+#     print("Student Name:", student)
+#     for score in scores:
+#         print(score)
+# print_score("Irina", 5,4,3,2,5)
+# print_score("Igor", 5,4,5,3,2,5)
+# print_score("Lev")
+
+# def db(**kwargs):
+#     my_dict.update(kwargs)
+#
+#
+# my_dict = {"one": "first"}
+# db(k1=11, k2=31, k3=11, k4=91)
+# db(name='Bob', age=31, wight=61, eyes_color='grey')
+# print(my_dict)
+
+# def func(a,*args, **kwargs):
+#     return a, args, kwargs
+#
+#
+# print(func(5,9,7,8,4,3,2,1, k1=11, k2=31, k3=11, k4=91,d=55))
+
+
+# name = "Tom"
+# # print("Глобальная область видимости: ", id(name))
+#
+# def hi():
+#     global name
+#     name = "Sam"
+#     # print("Локальная область видимости:", id(name))
+#     surname = "Johnson"
+#     print("Hello", name, surname)
+#
+#
+# def bye():
+#     print("Good bye", name)
+#
+#
+# hi()
+# bye()
+# print(name)
+
+
+# i = 5
+# def func(arg=i):
+#     print(arg)
+#     arg += 1
+#     return arg
+# print(func(arg=10))
+# print(func(i))
+#
+# i = 6
+# func()
+
+
+# def add_five(a):
+#     x = 2
+#
+#     def add_some():
+#         print("x =", x)
+#         return a + x
+#     return add_some()
+#
+# print(add_five(5))
+
+
+# sum = 5
+#
+# lst = [9, 5, 8, 7, 6]
+# print(sum(lst))
+
+
+# import builtins
+#
+# name = dir(builtins)
+#
+# for t in name:
+#     print(t)
+#     print(type(t))
+#     print(dir(t))
+
+
+# n = int(input("Введите количество студентов: "))
+#
+# students = {}
+#
+#
+# for name in range(1, 5):
+#
+#     name, module, ball = input().replace(' (', '#').replace('): ', '#').split('#')
+#     ball = int(ball)
+#     if name in students:
+#         students[name][module] = students[name].get(module, 0) + ball
+#     else:
+#         students[name] = {module: ball}
+#
+# for key in students:
+#     if len(students[key]) == 5 and sum(students[key].values()) >= 75:
+#         print(key)
+
+#
+# from typing import Union
+#
+#
+# def fill_data() -> list:
+#     """Заполняет базу данных студентов"""
+#     global students_count
+#     # Ввод пользователем количества студентов.
+#     students_count = int(input('Количество студентов: '))
+#     # Заполнение базы студентов.
+#     data: list[dict[str: Union[str, int]]] = [
+#         {
+#             'id': i,
+#             'Имя': input(f'Имя {i}-го студента: '),
+#             'Фамилия': input(f'Фамилия {i}-го студента: '),
+#             'Балл': int(input('Балл: '))
+#  } for i in range(1, students_count + 1)
+#     ]
+#
+#     return data
+#
+#
+# def get_average_grade(data: list[dict[str: Union[str, int]]]) -> Union[int, float]:
+#     """Функция подсчета среднего бала студентов."""
+#     grades: list[int] = [student['Балл'] for student in data]
+#     return round(sum(grades) / students_count)
+#
+#
+# def print_report(data: list[dict[str: Union[str, int]]]):
+#     """Функция вывода на печать запроса к базе данных."""
+#     average_grade: Union[int, float] = get_average_grade(data)
+#     print(f'Средний бал: {average_grade}. Студентов с балом выше среднего:')
+#     for student in data:
+#         if student['Балл'] > average_grade:
+#             print(student['Имя'])
+#
+#
+# if __name__ == '__main__':
+# #     # Авто тест.
+# #     # Глобальная переменная для хранения количества студентов.
+# #     students_count: int = 5
+# #     students: list[dict[str: Union[str, int]]] = [
+# #  {'id': 1, 'Имя': 'Игорь', 'Фамилия': 'Исаев', 'Балл': 12},
+# #  {'id': 2, 'Имя': 'Валентин', 'Фамилия': 'Киреев', 'Балл': 7},
+# #  {'id': 3, 'Имя': 'Виктор', 'Фамилия': 'Степанов', 'Балл': 4},
+# #  {'id': 4, 'Имя': 'Григорий', 'Фамилия': 'Иванов', 'Балл': 9},
+# #  {'id': 5, 'Имя': 'Дмитрий', 'Фамилия': 'Кузнецов', 'Балл': 6}
+# #     ]
+#
+#     # Для ручного заполнения.
+#     # Глобальная переменная для хранения количества студентов.
+#     students_count: int
+#     students = fill_data()
+#
+#     print_report(students)
+
+
+# 30.12.2023-------------------
+
+# def outer(who):
+#      a = 5
+#      def inner():
+#          print("Hello", who)
+#
+#      inner()
+#
+# outer()
+
+
+# def fun1():
+#     a=6
+#
+#     def fun2(b):
+#         a=4
+#         print(a + b)
+#
+#     print("a", a)
+#     fun2(4)
+#
+#
+# fun1()
+
+
+# x = 25
+# t = 0
+#
+# def fn():
+#     global t
+#     a = 30
+#
+#     def inner():
+#         nonlocal a
+#         a = 35
+#         print("a", a)
+#
+#     inner()
+#     t = a
+#
+#
+# fn()
+# c = x + t
+# print(c)
+
+
+# def fn1():
+#     x = 25 # 2
+#
+#     def fn2():
+#         x = 33 # 4
+#
+#         def fn3():
+#             nonlocal x
+#             x = 55 # 6
+#
+#             # print("fn3.x =", x) # 9
+#         fn3() # 5
+#         print("fn2.x =", x) # 7
+#
+#     fn2() # 3
+#     print("fn1.x =", x) # 8
+#
+# fn1() # 1
+
+
+# def outer(a1,b1,a2,d2):
+#     a = 0
+#     b = 0
+#
+#     def inner():
+#         nonlocal a, b
+#         a = a1 + a2
+#         b = b1 + d2
+#
+#     inner()
+#     return [a,b]
+#
+# res = outer(2,3,-1,4)
+# print(res) # [список [1, 7 ]]
+
+
+# Замыкание --------------------------------
+
+# def outer(n):
+#     def inner(x):
+#         return x + n
+#
+#     return inner
+#
+#
+# item1 = outer(5)
+# print(item1(10))
+#
+# item2 = outer(5)
+# print(item2(1))
+
+
+# def func1():
+#     a = 1
+#     b = 'line'
+#     c = [1,2,3]
+#
+#     def func2():
+#         nonlocal a, b
+#         c.append(4)
+#         a += 1
+#         b += "_new"
+#         return a, b, c
+#
+#     return func2
+#
+#
+# func = func1()
+# print(func())
+
+
+# def func(city):
+#     s = 0
+#     def inner():
+#         nonlocal s
+#         s += 1
+#         print(city, s)
+#     return inner
+# res1 = func('Moscow')
+# res1()
+# res1()
+# res2 = func('sochi')
+# res2()
+# res2()
+# res2()
+# res1()
+# res3 = func('Kyev')
+# res3()
+# res3()
+# res3()
+
+# lambda(анонимная функция)
+
+
+# print((lambda x, y: x + y)(1, 2))
+#
+# func = lambda x, y: x + y
+# print(func(1, 2))
+# print(func('a', 'b'))
+
+
+# print((lambda x, y: x ** 2 + y ** 2)(2, 5))
+# print((lambda x, y = 5: x ** 2 + y ** 2)(2, ))
+# print((lambda x = 2, y = 5: x ** 2 + y ** 2)())
+# print((lambda x = 2, y = 5: x ** 2 + y ** 2)(10, 20))
+# print((lambda x = 2, y = 5: x ** 2 + y ** 2)(y = 10))
+
+
+# print((lambda *args: args)(1, 2, 3, 4, 5))
+
+
+# y = (
+#     lambda x: x * 2,
+#     lambda x: x * 3,
+#     lambda x: x * 4,
+# )
+# for i in y:
+#     print(i("abc__"))
+#
+
+
+# def outer(n):
+#     def inner(x):
+#         return x + n
+#
+#     return inner
+#
+#
+# f = outer(5)
+# print(f(10))
+#
+#
+# def outer1(n):
+#     return lambda x: x + n
+#
+#
+# f1 = outer1(5)
+# print(f1(10))
+#
+# outer2 = lambda n: lambda x: x + n
+#
+# f2 = outer2(5)
+# print(f2(10))
+#
+# print((lambda n: lambda x: x + n)(5)(10))
+
+
+# print((lambda x: lambda y: lambda z: x + y + z) (2)(4)( 6))
+
+
+# def func(item):
+#     return item[1]
+
+
+# d = {'b':3, 'c': 1, 'a': 2}
+# print(d)
+# lst = list(d.items())
+# print(lst)
+# lst.sort(key=lambda i: i[1])
+# # lst.sort(key=func)
+# print(lst)
+# d1 = dict(lst)
+# print(d1)
+
+
+# player = [
+#     {'name':'Anton', 'last name': 'Bipykov', 'rating': 9},
+#     {'name':'Aleksey', 'last name': 'Bodny', 'rating': 10},
+#     {'name':'Fedor', 'last name': 'Sidorov', 'rating': 4},
+#     {'name':'Mihail', 'last name': 'Semenov', 'rating': 6},
+# ]
+# res = sorted(player, key=lambda i: i['last name'])
+# print(res)
+# res = sorted(player, key=lambda i: i['rating'], reverse=True)
+# print(res)
+
+
+# a =[
+#     lambda x, y: x + y,
+#     lambda x, y: x - y,
+#     lambda x, y: x * y,
+#     lambda x, y: x / y,
+#     lambda x, y: x // y,
+#     lambda x, y: x % y,
+# ]
+#
+# print(a[0](5, 2))
+# print(a[1](5, 2))
+# print(a[2](5, 2))
+# print(a[3](5, 2))
+# print(a[4](5, 2))
+# print(a[5](5, 2))
+
+
+# d = {
+#     1: lambda: print("Понедельник"),
+#     2: lambda: print("Вторник"),
+#     3: lambda: print("Среда"),
+#     4: lambda: print("Четверг"),
+#     5: lambda: print("Пятница"),
+#     6: lambda: print("Суббота"),
+#     7: lambda: print("Воскресенье"),
+# }
+#
+# d[6]()
+
+
+# print((lambda a, b: a if a > b else b)(15, 23))
+
+
+# print((lambda a, b, c: a if (a < b and a < c) else (b if b < c else c))(18, 19, 17))
+
+
+# f = open(r'C:\Users\User\PycharmProjects\pythonProject1\test.txt, mode= 'r')
+# f = open('test.txt', 'r')
+# print(*f)
+# print(f)
+# f.close()
+# print(f.close)
+# print(f.mode)
+# print(f.name)
+# print(f.encoding)
+
+
+# f = open('test.txt', 'r')
+# print(f.read(3))
+# print(f.read())
+# f.close()
+
+# f = open('test1.txt', 'r')
+# #print(f.read())
+# print(f.readline())
+# print(f.readline(9))
+# print(f.readline())
+# f.close()
+
+
+# f = open('test1.txt', 'r')
+# print(f.readlines(16))
+# print(f.readlines())
+# f.close()
+
+# f = open('test1.txt', 'r')
+# count = 0
+# for line in f:
+#     print(line)
+#     count += 1
+# f.close()
+# print("count =", count)  # подсчитывает количество строк в файле = 3
+
+
+# f = open("xyz.txt", "w")
+# f.write("Hello\nWorld\n")
+#
+# f.close()
+
+
+# f = open("xyz.txt", "a")
+# f.write("New text.\nOpen text in Explorer")
+# f.close()
+#
+#
+# f = open("test.txt", "a")
+# f.write("This is a factor")
+# f.close()
+
+
+# f = open("xyz.txt", "w")
+# line = ['This is line 1\n', 'This is line 2']
+# f.writelines(line)
+# f.close()
+
+
+# class Stack:
+#     def __init__(self):
+#         print("Hi!")
+#
+# stackObject = Stack()
+
+
+# class Stack:
+#     def __init__(self):
+#         self.__stacklist = [] # инкапсуляция - нельзя переменную увидеть из вне
+# stackObject = Stack()
+# print(len(stackObject.stacklist)) # выход - AttributeError
+
+
+# class Stack:
+#     def __init__(self):
+#         self.__stacklist = []
+#
+#     def push(self, value):
+#         self.__stacklist.append(value)
+#
+#     def pop(self):
+#         value = self.__stacklist[-1]
+#         del self.__stacklist[-1]
+#         return value
+#
+#
+# stackObject = Stack()
+#
+# stackList.push(3)
+# stackList.push(2)
+# stackList.push(1)
+#
+# print(stackList.pop())
+# print(stackList.pop())
+# print(stackList.pop())
+
+
+# class Stack:
+#     def __init__(self):
+#         self.__stacklist = []
+#
+#     def push(self, val):
+#         self.__stacklist.append(val)
+#
+#     def pop(self):
+#         value = self.__stacklist[-1]
+#
+#     del self.__stacklist[-1]
+#     return val
+#
+#
+# stackObject1 = Stack()
+# stackObject2 = Stack()
+#
+# stackObject1.push(3)
+# stackObject2.push(stackObject1.pop())
+# print(staclObject2.pop())
+
+
+# for i in range(5):
+#     nam = int(input())
+#     nam1 = int(input())
+#
+#     print("Разность: ", nam - nam1)
+#
+# print("Вызов завершён")
+
+
+# a = int(input("Введите числитель: "))  #-------------------------------- Программа при делении на 0 делить нельзя.
+# b = int(input("Введите знаменатель: "))
+# print('Результат : ', a/b if b else 'На ноль делить нельзя!!!')
+
+
+# try:
+# 	n = int(input("введите делимое : "))  #---------------------------------- программа с использованием исключений
+# 	m = int(input("введите делитель : "))
+# 	print("результат : ", n / m)
+# except (ValueError, ZeroDivisionError):
+# 	print("На ноль или строки вводить или делить нельзя")
+# else:
+# 	print("Всё нормально вы ввели : ", n, "и", m)
+# finally:
+# 	print("конец программы")
+
+
+# n = input("введите число : ") # программа складывае равные по типу данных или конкатенация строк, строк+числа
+# m = input("введите число : ")
+#
+# try:
+#     n = int(n)
+#     m = int(m)
+# # print(int(n) + int(m))
+# except ValueError:
+#     n = str(n)
+# # print(str(n) + str(m))
+# finally:
+#     print("программа завершилась", n + m)
+#
+#
+# i = 1 # программа выводит только чётные числа в диапазоне от 1 до 20
+# while i <= 20:
+#     if i % 2 == 0:
+#         print("i = ", i)
+#     i += 1
+
+
+# 25.11.2023 -------------------------------
+
+# for i in range(3):
+#     print(i)
+#     if i == 1:
+#         break
+#     else:
+#         print('done')
+
+# for i in range(1):
+#     print("+++ i  =", i)
+#     for j in range(2):
+#         print("----- j =", j)
+
+# w = int(input("Введите ширину прямоугольника: "))  # программа вывода прямоугольника
+# h = int(input("Введите высоту прямоугольника: "))
+# for i in range(h):
+#     for j in range(w):
+#         if i == 0 or i == h - 1 or j == 0 or j == w - 1:
+#             print("*", end="")
+#         else:
+#             print(" ", end="")
+#     print()
+
+# nums = [letter * 2 for letter in "Banana"]
+
+# nums = [i for i in range(30) if i % 2 == 0] # Выводит чётные числа
+# print(nums)
+
+# Список
+
+# nums = [8, 3, 9, 4, 1, "one"]
+# print(nums)
+# print(type(nums))
+# print(nums[-2])
+# # print(nums[0])
+#
+# nums[1] = 256
+# print(nums)
+# nums[3] += 100
+# print(len(nums))
+# for i in range(len(nums)):
+#     print(nums[i] + 2)
+
+# for i in range(1, 10):  # Таблица умножения
+#     for j in range(1, 10):
+#         print(i * j, end="\t")
+#     print("\n")
+
+# s = []
+# print(s)
+#
+# b = list()
+# print(b)  #  досмотреть и дописать 11:10 время
+
+# a = [0 for _ in range(5)]  # нижнее подчёркивание это зарезервированное имя
+# print(a)
+# b = [_ for _ in range(5)]
+# print(b)
+
+# n = 5
+# b = [i ** 2 for i in range(1, n + 1)]
+# print(b)
+
+# a, b = [1, 2, 3], [4, 5]
+# c = a + b
+# print(c)
+# d = b * 3
+# print(d)
+
+# a = [0] * int(input("введите количество элементов списка: "))
+# print(a)
+# for i in range(len(a)):
+#     a[i] = input("-> ")
+# print(a)
+
+# a = [input(">->-> ") for i in range(int(input("n = ")))]
+# print(a)
+#
+# for i in range(1, len(a)):
+#     if a[i] > a[i - 1]:
+#         print(a[i], end="")
+
+#  26.11.2023 ---------------
+
+# a = [1, 2, 3, 4, 5, 6, 7]
+# # print(a)
+# # # a[0], a[1] = a[1], a[0]
+# # print(a)
+# # print(a[3:])
+# # print(a[::2])
+# a[1:3] = [0, 0, 0, 0]
+# print(a)
+
+# s = [5, 9, 3, 7, 1, 8]
+# s.append(99)
+# print(s)
+# s.extend([1, 2, 3])
+# print(s)
+# s.insert(3, 100)
+# print(s)
+# s.extend('add')
+# print(s)
+
+# s = []
+# n = int(input("Кол-во эл. списка: "))
+# for num in range(n):
+#     x = int(input("Введите число: "))
+#     s.insert(0, x)
+# print(s)
+
+# задача выводит числа кратные 3
+# s = []
+# n = int(input("Кол-во элементов: "))
+# for num in range(n):
+#     x = int(input("Введите число кратное 3: "))
+#     if x % 3 == 0:
+#         s.append(x)
+#     else:
+#         print("Число не кратно 3: ")
+# print(s)
+
+# a = [5, 9, 2, 1, 4, 3, 2, 4]
+# b = [4, 2, 1, 3, 7]
+# c = []
+# for i in a:
+#     for j in b:
+#         if i in c:
+#             continue
+#         if i == j:
+#             c.append(i)
+#             break
+#
+# print(c)
+
+# a = [1, 2, 3]   #  сложить два списка и записать результат в с значение индексов 1+1; 2+2 ...
+# b = [11, 22, 33]
+# c = []
+# for i in range(len(a)):
+#     c.append(a[i])
+#     c.append(b[i])
+# print(c)
+
+# a = [1, 2, 3, 44, 55]
+# b = [11, 22, 33]
+# c = []
+#
+# if len(a) > len(b):
+#     a, b = b, a
+# for i in range(len(a)):
+#     c.append(a[i])
+#     c.append(b[i])
+# for i in range(len(a), len(b)):
+#     c.append(b[i])
+
+# if len(b) > len(a):
+#
+#     for i in range(len(a)):
+#         c.append(a[i])
+#         c.append(b[i])
+#     for i in range(len(a), len(b)):
+#         c.append(b[i])
+# else:
+#     for i in range(len(b)):
+#         c.append(a[i])
+#         c.append(b[i])
+#     for i in range(len(b), len(a)):
+#         c.append(a[i])
+# print(c)
+
+#
+# s = [5, 9, 3, 7, 1, 8, 9, 9]
+# print(s)
+# s.remove(9)
+# print(s)
+
+# n = ......  #  дописать 12:40 - 12:50
+
+# s = [5, 9, 3, 7, 9, 1, 8, 9]
+# print(s)
+# num = s.count(9)
+# # print(num)
+#
+# ind = s.index(9) #  возвращает индекс первого искомого элемента
+# print(ind)
+# ind = s.index(9, 5)
+# print(ind)
+
+# a = [1, 3, 5, 6, 2, 4, 6, 1, 2, 7]
+# b = []
+# for i in a:
+#     if i != a[0. i]:
+#         b.append(i)
+#         break
+# print(b)
+
+
+#  02.12.2023____------------------
+# a = [1, 2, 3]
+# b = a.copy()
+# print("a =",a)
+# print("b =",b)
+#
+# a.append(20)
+# print("a =",a)
+# print("b =",b)
+# b.append(120)
+
+
+# a = [5, 4, 1, 2, 3]
+# print(a)
+# # a.reverse()
+# # print(a)
+#
+# # a.sort()
+# # print(a)
+# a.sort(reverse=True)
+# print(a)
+
+
+# b =["Виталий","Сергей","Александр","Анна"]
+# b.sort(key=len, reverse=True)
+# print(b)
+
+# a = [5, 4, 1, 2, 3]
+# print(a)
+# a.sort()
+# print(a)
+
+# sort = sorted(a)
+# print(sort)
+
+#  Генерация случайных данных  ----->----------->-------------->------------->------------->
+
+
+# print(random.random())
+# print(random.randint(3, 9))
+# print(random.randrange(3, 9))
+#
+# print(round(random.uniform(10.5, 25.5), 2))
+
+# city_list = ['Москва', 'Новосибирск', 'Воронеж', 'Сочи', 'Екатеринбург']
+# print(random.choice(city_list))
+# print(random.choices(city_list, k=3))
+# random.shuffle(city_list)
+# print(city_list)
+
+
+# s = [55, 66, 77, 88, 99, 9, 8, 7, 6, 5, 4, 1, 2, 3]
+# print(random.choice(s))
+# print(random.choices(s, k=5))
+
+# lst = [5, 4, 3, 2, 1]
+# print(len(lst))
+# print(sum(lst))
+# print(min(lst))
+# print(max(lst))
+
+# Задача --------------------------------
+
+# import random
+# mas = [random.randint(0, 20) for i in range(10)]
+# print(mas)
+
+# import random
+# mas = [random.randint(0, 100) for i in range(10)]
+# print(mas)
+# mas_ = max(mas)
+# print(mas_)
+# mas.remove(mas_)
+# mas.insert(0, mas_)
+# print(mas)  #  вариант 1 программа работает
+
+# import random
+# mas = [random.randint(0, 100) for i in range(10)]
+# print(mas)
+# max_ = max(mas)
+# print(max_)
+# mas.remove(max_)
+# mas.insert(0, max_)
+# print(mas)    # вариант 2 программа работает
+
+#  Перемена--------------------------------
+# Задача : программа находит мин значение и выводит в новый список с удалением других объектов впереди себя
+# import random
+#
+# lst = [random.randint(0, 100) for i in range(10)]
+# print(lst)
+#
+# min_ch = min(lst)
+# print("min =", min_ch)
+#
+# ind_min = lst.index(min_ch)
+# print("index min =", ind_min)
+#
+# del lst[: ind_min]
+# print(lst)
+# print(lst(ind_min))  # перепроверить
+
+# lst = [5]
+# print(lst)
+# if not lst:
+#     print("Список пуст")
+# else:
+#     print("В списке есть элементы")
+
+# import random
+#
+# n1 = int(input("Введите размер первого списка: "))
+# n2 = int(input("Введите размер второго списка: "))
+#
+# a = [random.randint(0, 10) for i in range(n1)]
+# b = [random.randint(0, 10) for j in range(n2)]
+# print("Первый список: ", a)
+# print("Второй список: ", b)
+# c = a + b
+# print("Третий список: ", c)
+# d = []
+# for element in a:
+#     if element not in d:
+#         d.append(element)
+# for element in b:
+#     if element not in d:
+#         d.append(element)
+# print("Элементы обоих списков без повторений: ", d)
+# c = []
+# for i in a:
+#     if i in b and i not in c:
+#         c.append(i)
+# print("Элементы общие для обоих списков: ", c)
+
+# c = [min(a), min(b), max(a), max(b)]
+# print(c)    # задача работает
+
+#  ----- Домашняя работа от 02,12,2023
+
+
+# import random
+#
+# print(random.sample(range(1, 10+1), 10))
+
+# a = [random.randint(0, 10) for i in range(10)]
+# b = []
+# for element in a:
+#     if element not in b:
+#         b.append(element)
+# print(b)
+
+# import random
+#   a = [random.randint(1, 10) for i in range(10)]
+# for v in range(1, 10):
+#     v = 2 ** v
+#     b = list(random_range(v))
+#     print("Need", v, "found", len(set(b)), "(min,max)", (min(b), max(b)))
+# print("", b)
+# print()
+
+# m = [
+#     [1, 2, 3, 4],
+#     [5, 6, 7, 8],
+#     [9, 10, 11, 12]
+# ]
+# # m = ["Hello", "World"]
+# print(m)
+# # print(len(m))
+# # print(m[1][2])
+# print()
+# # for row in range(len(m)):
+# #     for col in range(len[row]):
+# #         print(m[row][col], end="\t")
+# #         print()
+# for row in m:
+#     for x in row:
+#         print(x, end="\t")
+#     print()
+
+
+# Домашняя работа от 04.02.2024
+# import os
+#
+# dir_name = 'Work'
+# objs = os.listdir(dir_name)
+# print(objs)
+#
+# for obj in objs:
+#     p = os.path.join(dir_name, obj)
+#     #print(p)
+#     if os.path.isfile(p):
+#         print(f"{obj} - file - {os.path.getsize(p)} bytes")
+#     elif os.path.isdir(p):
+#         print(f"{obj} - dir")
+
+
+
+# 10.02.2024--------------------------------------------------------
+#  в классе могут быть свойства (поля, переменные)
+#  методы(функции). Имя класса пишется в верхнем регистре
+#  пропускаем 2 пустых линии.
+# class Point:
+#     x = 1
+#     y = 1
+#
+#     def set_coord(self, x, y):
+#         self.x = x
+#         self.y = y
+#         print(self.__dict__)
+#
+# p1 = Point()
+# # p1.x = 5
+# # p1.y = 24
+# # print(p1.x)
+# # print(p1.y)
+# # print(p1.__dict__)
+# # print(id(p1))
+# p1.set_coord(5, 24)
+# Point.set_coord(p1, 5, 24)
+#
+#
+# p2 = Point()
+# # p2.x = 10
+# # print(p2.x)
+# # print(p2.y)
+# # print(p2.__dict__)
+# # print(id(p2))
+# #
+# # print(id(Point))
+# p2.set_coord(10, 30)
+#
+# # 10:36-- дописать
+# # 10.57 -- продолжим --------------------------------
+
+#  задача ---------------------------------------------
+
+# class Human():
+#     name = "name"
+#     birthday = "00.00.0000"
+#     phone = "00-00-00"
+#     country = "country"
+#     city = "city"
+#     address = "street, house"
+#
+#     def print_info(self):
+#         print(" Персональные данные ".center(40, "*"))
+#         print(f"Имя: {self.name}\nДата рождения: {self.birthday}\nНомер телефона: {self.phone}\n"
+#               f"Страна: {self.country}\nГород: {self.city}\nДомашний адрес: {self.address}")
+#         print("=" * 40)
+#
+#     def input_info(self, first_name, birthday, phone, country, city, address):
+#         self.name = first_name
+#         self.birthday = birthday
+#         self.phone = phone
+#         self.country = country
+#         self.city = city
+#         self.address = address
+#
+#     def set_address(self, address): # Устанавливает замену адрессса
+#         self.address = address
+#
+#     def get_address(self): # получаем адресс
+#         return self.address
+#
+#     def __set_name__(self, name): # Устанавливаем имя
+#         self.name = name
+#
+#     def get_name(self): # Получаем имя
+#         return self.name
+#
+#
+# h1 = Human()
+# h1.print_info()
+# h1.input_info("Юля", "23.05.1986", "45-46-98", "Россия", "Москва", "Чистопрудный бульвар, 1A")
+#
+# h1.print_info()
+# h1.set_address("ул.Ленина, 56")
+# print(h1.get_address())
+# h1.__set_name__("Юлия")
+# print(h1.get_name())
+
+# ----------------------------------------------------------------
+# Задача
+
+# class Person:
+#     skill = 10  # Статическое свойство(имеют первоначальные значения)
+#     count = 0  # считает количество экземпляров класса
+#
+#     # name = ""
+#     # surname = ""
+#
+#     def __init__(self, name, surname):
+#         self.name = name  # Динамические свойства
+#         self.surname = surname
+#         #print("Иннициализатор класса", self)
+#         # self.count += 1 # обращаться к статическим свойствам через экземпляр класса
+#         Person.count += 1 # обращаться к статическим свойствам через Имя класса
+#
+#     # def __del__(self):
+#     #     print("Удаления экземпляра: ", self)
+#     #
+#     # def print_info(self):
+#     #     print("Данные сотрудники: ", self.name, self.surname)
+#     #
+#     # def add_skill(self, k):
+#     #     self.skill += k
+#     #     print("Квалификация сотрудника: ", self.skill, end="\n\n")
+#
+#
+# p1 = Person("Виктор", " Резник")
+# # p1.print_info()
+# # p1.add_skill(3)
+# # del p1
+# # p1 = 5
+# print(p1.count)
+#
+# p2 = Person("Анна", "Долгих")
+# # p2.print_info()
+# # p2.add_skill(2)
+# print(p2.count)
+# print(Person.count)
+
+# ------------------------------------------------------------------------------------------------
+# Задача
+
+# class Robot:
+#     k = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#         print("Инициализация робота: ", self.name)
+#         Robot.k += 1
+#
+#     def __del__(self):
+#         print(self.name, "выключается")
+#
+#         Robot.k -= 1
+#
+#         if Robot.k == 0:
+#             print(self.name, "был последним")
+#         else:
+#             print(self.name, "был последним")
+#
+#     def sey_hi(self):
+#         print("Приветствую! Меня зовут: ", self.name)
+#
+#
+# droid1 = Robot('R2-D2')
+# droid1.sey_hi()
+# print("Численность роботов: ", Robot.k)
+#
+# droid2 = Robot('C-3PO')
+# droid2.sey_hi()
+# print("Численность роботов: ", Robot.k)
+#
+# droid3 = Robot('S-9PO')
+# droid3.sey_hi()
+# print("Численность роботов: ", Robot.k)
+#
+# print("\nЗдесь роботы могут проделать какую-то работу\n")
+#
+# print("Роботы закончили свою работу. Давайте их выключим.")
+# del droid1
+# del droid2
+# del droid3
+#
+# print("Численность роботов: ", Robot.k)
 
 
