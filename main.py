@@ -1043,12 +1043,12 @@
 # s = tuple(randint(0, 100) for i in range(5))
 # print(s)
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # s = tuple(2 ** i for i in range(1, 13))
 # print(s)
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # t1 = tuple("Hello")
 # t2 = tuple("world")
@@ -1097,7 +1097,7 @@
 # #   или x, y, z = t   распаковка кортежа
 # print(x, y, z)
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # def get_user():
 #     name = "Tom"
@@ -1147,7 +1147,7 @@
 
 
 # ---------- Домашняя работа от 09.12.2023, случайные списки кортежа от 0 до 5 и от -5 до 0,
-#сложить оба картежа и вывести в ответ сколько выпадает случайных чисел 0.-------------------
+# сложить оба картежа и вывести в ответ сколько выпадает случайных чисел 0.-------------------
 # Вариант
 # import random
 #
@@ -2170,7 +2170,7 @@
 # lambda_x_y_z[1](10, 13)
 # lambda_x_y_z[2](7, 5, 3)
 
-#---------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------
 
 
 # f = open(r'C:\Users\User\PycharmProjects\pythonProject1\test.txt, mode= 'r')
@@ -2232,9 +2232,9 @@
 # f.writelines(line)
 # f.close()
 
-#--------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------
 # Домашняя работа от 27.01.2024-===============================================================================
-#import re
+# import re
 
 # data = '+7 499 456-45-78, +74994564578, 7 (499) 456 45 78, 7 (499) 456-45-78'
 #
@@ -2242,7 +2242,7 @@
 #
 # print(re.findall(pattern, data))
 
-#==============================================================================================================
+# ==============================================================================================================
 
 # 28.01.2024
 
@@ -2261,11 +2261,9 @@
 #
 # print(count_negative(data))
 
-#==============================================================================================================
+# ==============================================================================================================
 
 #
-
-
 
 
 # class Stack:
@@ -2753,20 +2751,19 @@
 
 
 # Домашняя работа от 04.02.2024
-# import os
-#
-# dir_name = 'Work'
-# objs = os.listdir(dir_name)
-# print(objs)
-#
-# for obj in objs:
-#     p = os.path.join(dir_name, obj)
-#     #print(p)
-#     if os.path.isfile(p):
-#         print(f"{obj} - file - {os.path.getsize(p)} bytes")
-#     elif os.path.isdir(p):
-#         print(f"{obj} - dir")
+import os
 
+dir_name = 'Work'
+objs = os.listdir(dir_name)
+print(objs)
+
+for obj in objs:
+    p = os.path.join(dir_name, obj)
+    print(p)
+if os.path.isfile(p):
+    print(f"{obj} - file - {os.path.getsize(p)} bytes")
+elif os.path.isdir(p):
+    print(f"{obj} - dir")
 
 # 10.02.2024--------------------------------------------------------
 #  в классе могут быть свойства (поля, переменные)
@@ -2939,67 +2936,6 @@
 # del droid3
 #
 # print("Численность роботов: ", Robot.k)
-
-# ----------------------------------------------------------------
-# Домашняя работа от 10.02.2024
-
-# class Auto():
-#
-#     def __init__(self, model, year, manufacturer, engine_power, color, price):
-#         self.model = model
-#         self.year = year
-#         self.manufacturer = manufacturer
-#         self.engine_power = engine_power
-#         self.color = color
-#         self.price = price
-#
-#     def print_auto(self):
-#         print(" Персональные данные ".center(40, "*"))
-#         print(f"\nНазвание модели: {self.model}\nГод выпуска: {self.year}\nПроизводитель: {self.manufacturer}\n"
-#               f"Мощность двигателя: {self.engine_power} л.с.\nЦвет машины: {self.color}\nЦена: {self.price}\n")
-#         print("=" * 40)
-#
-#     def set_model(self, model):
-#         self.model = model
-#
-#     def get_model(self):
-#         return self.model
-#
-#     def set_year(self, year):
-#         self.year_of_issue = year_of_issue
-#
-#     def get_year_of_issue(self):
-#         return self.year_of_issue
-#
-#     def set_manufacturer(self, manufacturer):
-#         self.manufacturer = manufacturer
-#
-#     def get_manufacturer(self):
-#         return self.manufacturer
-#
-#     def set_engine_power(self, engine_power):
-#         self.engine_power = engine_power
-#
-#     def get_engine_power(self):
-#         return self.engine_power
-#
-#     def set_color(self, color):
-#         self.color = color
-#
-#     def get_color(self):
-#         return self.color
-#
-#     def set_price(self, price):
-#         self.price = price
-#
-#     def get_price(self):
-#         return self.price
-#
-#
-# my_car = Auto("model='X7 M50i'", "year='2021'", "manufacturer='BMW'", "engine_power=530", "color='white'",
-#               "price=10790000")
-#
-# print(my_car.print_auto())
 
 
 # 11.02.2024 -------------------------------------------------------------------------------------------------
@@ -4512,7 +4448,6 @@
 #         print(f"{obj} - dir")
 
 
-
 # 10.02.2024--------------------------------------------------------
 #  в классе могут быть свойства (поля, переменные)
 #  методы(функции). Имя класса пишется в верхнем регистре
@@ -4683,5 +4618,3 @@
 # del droid3
 #
 # print("Численность роботов: ", Robot.k)
-
-
