@@ -1,3 +1,5 @@
+# Классная работа
+
 # class Point:
 #     __slots__ = ["__x", "__y", "z"]
 #     def __init__(self, x, y):
