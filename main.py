@@ -1235,8 +1235,8 @@
 #     print(i)
 
 # r = ['ab_1', 'ac_2', 'bc_1', 'bc_2']
-# # a = [i for i in r if 'a' not in i]
-# # a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r]
+ # a = [i for i in r if 'a' not in i]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r]
 # a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r if i[1] == 'c']
 # print(a)
 
@@ -1344,7 +1344,7 @@
 # print("Количество гласных равно: ",(count))
 
 
-# Словарь 'dict'--------------17.12.2023
+# Словарь 'dict'--------------17.12.2023--------------------------------------------------------
 
 # lst = [1, 2, 3]
 # d = {'one': 1, 'two': 2, 'three': 3}
@@ -1841,60 +1841,6 @@
 #         print(key)
 
 #
-# from typing import Union
-#
-#
-# def fill_data() -> list:
-#     """Заполняет базу данных студентов"""
-#     global students_count
-#     # Ввод пользователем количества студентов.
-#     students_count = int(input('Количество студентов: '))
-#     # Заполнение базы студентов.
-#     data: list[dict[str: Union[str, int]]] = [
-#         {
-#             'id': i,
-#             'Имя': input(f'Имя {i}-го студента: '),
-#             'Фамилия': input(f'Фамилия {i}-го студента: '),
-#             'Балл': int(input('Балл: '))
-#  } for i in range(1, students_count + 1)
-#     ]
-#
-#     return data
-#
-#
-# def get_average_grade(data: list[dict[str: Union[str, int]]]) -> Union[int, float]:
-#     """Функция подсчета среднего бала студентов."""
-#     grades: list[int] = [student['Балл'] for student in data]
-#     return round(sum(grades) / students_count)
-#
-#
-# def print_report(data: list[dict[str: Union[str, int]]]):
-#     """Функция вывода на печать запроса к базе данных."""
-#     average_grade: Union[int, float] = get_average_grade(data)
-#     print(f'Средний бал: {average_grade}. Студентов с балом выше среднего:')
-#     for student in data:
-#         if student['Балл'] > average_grade:
-#             print(student['Имя'])
-#
-#
-# if __name__ == '__main__':
-# #     # Авто тест.
-# #     # Глобальная переменная для хранения количества студентов.
-# #     students_count: int = 5
-# #     students: list[dict[str: Union[str, int]]] = [
-# #  {'id': 1, 'Имя': 'Игорь', 'Фамилия': 'Исаев', 'Балл': 12},
-# #  {'id': 2, 'Имя': 'Валентин', 'Фамилия': 'Киреев', 'Балл': 7},
-# #  {'id': 3, 'Имя': 'Виктор', 'Фамилия': 'Степанов', 'Балл': 4},
-# #  {'id': 4, 'Имя': 'Григорий', 'Фамилия': 'Иванов', 'Балл': 9},
-# #  {'id': 5, 'Имя': 'Дмитрий', 'Фамилия': 'Кузнецов', 'Балл': 6}
-# #     ]
-#
-#     # Для ручного заполнения.
-#     # Глобальная переменная для хранения количества студентов.
-#     students_count: int
-#     students = fill_data()
-#
-#     print_report(students)
 
 
 # 30.12.2023-------------------
@@ -2749,21 +2695,6 @@
 #         print(x, end="\t")
 #     print()
 
-
-# Домашняя работа от 04.02.2024
-import os
-
-dir_name = 'Work'
-objs = os.listdir(dir_name)
-print(objs)
-
-for obj in objs:
-    p = os.path.join(dir_name, obj)
-    print(p)
-if os.path.isfile(p):
-    print(f"{obj} - file - {os.path.getsize(p)} bytes")
-elif os.path.isdir(p):
-    print(f"{obj} - dir")
 
 # 10.02.2024--------------------------------------------------------
 #  в классе могут быть свойства (поля, переменные)
