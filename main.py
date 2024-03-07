@@ -3106,7 +3106,7 @@
 #         break
 # for i in goods:
 #     print(i, ")", goods[i][0], " - ", goods[i][1], "шт. по ", goods[i][2], "руб", sep="")
-#
+
 
 # d = {'a': 1, 'b': 2, 'c': 3}
 #
@@ -3166,7 +3166,7 @@
 # print(d_dict)
 
 
-# 23.12.2023--------------------------------
+# 23.12.2023------------------------------------------------------------------------------------------------
 
 # d = {'a': 1, 'b': 2, 'c': 3}
 #
@@ -3185,7 +3185,7 @@
 #
 # new_disc = x | y
 #
-# print(new_disc)   работает
+# print(new_disc)   # работает
 
 
 # a = {
@@ -3278,6 +3278,7 @@
 #         d[current_key].append(item)
 #
 # print(d)  # задача работает
+
 
 # d = dict(zip([1,2,3], ['one','two','three']))
 # print(d)
@@ -3904,7 +3905,7 @@
 # 	m = int(input("введите делитель : "))
 # 	print("результат : ", n / m)
 # except (ValueError, ZeroDivisionError):
-# 	print("На ноль или строки вводить или делить нельзя")
+# 	print("На ноль  делить или строки вводить нельзя")
 # else:
 # 	print("Всё нормально вы ввели : ", n, "и", m)
 # finally:
@@ -3932,7 +3933,7 @@
 #     i += 1
 
 
-# 25.11.2023 -------------------------------
+# Class_Work 25.11.2023 ----------------------------------------------------------------------------------
 
 # for i in range(3):
 #     print(i)
@@ -4015,7 +4016,7 @@
 #     if a[i] > a[i - 1]:
 #         print(a[i], end="")
 
-#  26.11.2023 ---------------
+#  Class_Work 26.11.2023 --------------------------------------------------------------------------------
 
 # a = [1, 2, 3, 4, 5, 6, 7]
 # # print(a)
@@ -4129,7 +4130,8 @@
 # print(b)
 
 
-#  02.12.2023____------------------
+#  Class_Work_from 02.12.2023-----------------------------------------------------------------------------------
+
 # a = [1, 2, 3]
 # b = a.copy()
 # print("a =",a)
@@ -4325,7 +4327,9 @@
 #         print(f"{obj} - dir")
 
 
-# 10.02.2024--------------------------------------------------------
+# Class_Work_from 10.02.2024-------------------------------------------------------------------------------
+
+
 #  в классе могут быть свойства (поля, переменные)
 #  методы(функции). Имя класса пишется в верхнем регистре
 #  пропускаем 2 пустых линии.
@@ -4497,7 +4501,7 @@
 # print("Численность роботов: ", Robot.k)
 
 
-# 18.02.2024-------------------------------------------------------------------------------------------
+# Class_Work_from 18.02.2024-------------------------------------------------------------------------------------------
 
 # Задача она же и домашняя, нужно будет добавить в двух вариантах прорерти и гет и сет
 
@@ -4639,3 +4643,278 @@
 # def weight(self, w):
 #     self.verify_weight(w)
 #     self.__weight = w
+
+
+# _str = 'I am learning Python. hello, WORLD!'  # Исходная строка.
+# start_range = _str.find('h')  # Находим индекс первого совпадения.
+# end_range = _str.rfind('h')  # Находим индекс второго совпадения.
+# not_reversed_part = _str[start_range + 1:end_range]  # Создаем строку из символов лежащих в найденном диапазоне.
+# reversed_part = ''.join(reversed(not_reversed_part))  # Разворачиваем строку
+# _str = _str.replace(not_reversed_part, reversed_part)  # Собираем строку путём замены подстрок.
+# print(_str)
+#
+#
+# data = [0, -2, 3, 9, -11, -4, -5, 6, 7, 7, -1]
+
+
+# def count_negative(lst: list) -> int:
+#     count = 0
+#     if not lst:
+#         return count
+#
+#     for i in range(1, len(lst) + 1):
+#         if lst[i - 1] < 0:
+#             count += 1
+#         else:
+#             return count + count_negative(lst[i:])
+#     return count
+#
+#
+# print(count_negative(data))
+
+# --------------------------------------------------------------------------------------------------
+
+
+
+# def inner(*args):
+#     func(args)
+#     print('Средне арифметическое чисел', args, '=', args)
+#
+#
+#     return inner
+#
+#
+# @func
+# def sum_of_numbers(*args):
+#     print('Сумма чисел', args, '=', sum(args))
+#     return args
+#
+#
+# sum_of_numbers(2, 3, 3, 4)
+#
+
+def decorator(func):
+    def arithmetic(*args):
+        print()
+        return func(*args) / len(args)
+
+    return arithmetic
+
+
+@decorator
+def calculations(*args):
+    print('Сумма чисел : 2, 3, 3, 4 =', sum(args))
+    return sum(args)
+
+
+print('Среднее арифметическое : 2, 3, 3, 4 =', calculations(2, 3, 3, 4))
+# ______________________________________________________________________________________________________________________
+#
+# def powerOf2(n):
+#     pow = 1
+#     for i in range(n):
+#         yield pow
+#         pow *= 2
+#
+#
+# # t = [x for x in powerOf2(5)]
+# t = list(powerOf2(5))
+# print(t)
+#
+# ______________________________________________________________________________________________________________________
+
+# def powersOf2(n):
+#     pow = 1
+#     for i in range(n):
+#         yield pow
+#     pow *= 2
+# for i in range(20):
+#     if i in powersOf2(6):
+#          print(i)
+
+
+# def Fib(n):  # генераьор чисел Фибоначчи
+#     p = pp = 1
+#     for i in range(n):
+#         if i in [0, 1]:
+#             yield 1
+#         else:
+#             n = p + pp
+#             pp, p = p, n
+#             yield n
+# fibs = list(Fib(10))
+# print(fibs)
+
+
+# 02.03.2024 -----------------------------------------------------------------------------------------------
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+#     def is_digit(self):
+#         if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
+#             return True
+#         return False
+#
+#     def is_int(self):
+#         if isinstance(self.__x, int) and isinstance(self.__y, int):
+#             return True
+#         return False
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = "red", width: int = 1) -> None:
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#
+#     def set_coord(self, sp, ep):
+#         if sp.is_digit() and ep.is_digit():
+#             self._sp = sp
+#             self._ep = ep
+#         else:
+#             print("Координаты должны быть числами")
+#
+#
+# class Line(Prop):
+#     def set_coord(self, sp, ep):
+#         if sp.is_int() and ep.is_int():
+#             self._sp = sp
+#             self._ep = ep
+#         else:
+#             print("Координаты должны быть числами")
+#
+#     def draw_line(self):
+#         print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+#
+# class Rect(Prop):
+#     def draw_rect(self):
+#         print(f"Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+#
+# line = Line(Point(1, 2), Point(10, 20), "yellow", 5)
+# line.set_coord(Point(15.5, 45), Point(100, 200))
+# line.draw_line()
+#
+# rect = Rect(Point(30, 40), Point(70, 80))
+# rect.set_coord(Point(55.5, 45.6), Point(100, 200))
+# rect.draw_rect()
+
+
+# def __init__(self, width, height, border_size, border_style, border_color):
+#     super().__init__(width, height)
+#
+#
+#     self.border_size = border_size
+#     self.border_style = border_style
+#     self.border_color = border_color
+#
+#
+# def show_rect(self):        super().show_rect()
+#
+#
+# print("Граница:")
+# print(f"Размер: {self.border_size}\nСтиль: {self.border_style}\nЦвет: {self.border_color}")
+
+# перегрузка методов-------------------------------------------------------------------------------------
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+#     def is_digit(self):
+#         if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
+#             return True
+#         return False
+#
+#     def is_int(self):
+#         if isinstance(self.__x, int) and isinstance(self.__y, int):
+#             return True
+#         return False
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = "red", width: int = 1) -> None:
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#
+#     def set_coord(self, sp, ep):
+#         if sp.is_digit() and ep.is_digit():
+#             self._sp = sp
+#             self._ep = ep
+#         else:
+#             print("Координаты должны быть числами")
+#
+#
+# class Line(Prop):
+#     def set_coord(self, sp, ep):
+#         if sp.is_int() and ep.is_int():
+#             self._sp = sp
+#             self._ep = ep
+#         else:
+#             print("Координаты должны быть целочисленными значениями")
+#
+#     def draw_line(self):
+#         print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+#
+# line = Line(Point(1, 2), Point(10, 20), "yellow", 5)
+# line.draw_line()
+# line.set_coord(Point(15, 45), Point(100, 200))
+# line.draw_line()
+# line.set_coord(Point(55, 55))
+# line.draw_line()
+
+
+# Абстрактные методы
+
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+#     def is_digit(self):
+#         if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
+#             return True
+#         return False
+#
+#     def is_int(self):
+#         if isinstance(self.__x, int) and isinstance(self.__y, int):
+#             return True
+#         return False
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = "red", width: int = 1) -> None:
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#
+#     def set_coord(self, sp, ep):
+#         if sp.is_digit() and ep.is_digit():
+#             self._sp = sp
+#             self._ep = ep
+#         else:
+#             print("Координаты должны быть числами")
+#
+# class Line(Prop):
+#     def draw(self):
+#         print(f"Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._}")

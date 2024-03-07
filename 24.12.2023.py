@@ -5,7 +5,7 @@ count = []
 for i in range(applicants):
     i += 1
     num = input(str(i) + '-й студент: ')
-    bul = int(input('Балл: '))
+    bul = float(input('Балл: '))
     students.append(num)
     count.append(bul)
 
