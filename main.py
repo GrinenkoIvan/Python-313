@@ -4673,43 +4673,26 @@
 # print(count_negative(data))
 
 # --------------------------------------------------------------------------------------------------
-
-
-
-# def inner(*args):
-#     func(args)
-#     print('Средне арифметическое чисел', args, '=', args)
+ # 13.01.2024 Домашняя работа ---------------------------------------------------------------
+# def decorator(func):
+#     def arithmetic(*args):
+#         print()
+#         return func(*args) / len(args)
+#
+#     return arithmetic
 #
 #
-#     return inner
+# @decorator
+# def calculations(*args):
+#     print('Сумма чисел : 2, 3, 3, 4 =', sum(args))
+#     return sum(args)
 #
 #
-# @func
-# def sum_of_numbers(*args):
-#     print('Сумма чисел', args, '=', sum(args))
-#     return args
-#
-#
-# sum_of_numbers(2, 3, 3, 4)
-#
-
-def decorator(func):
-    def arithmetic(*args):
-        print()
-        return func(*args) / len(args)
-
-    return arithmetic
-
-
-@decorator
-def calculations(*args):
-    print('Сумма чисел : 2, 3, 3, 4 =', sum(args))
-    return sum(args)
-
-
-print('Среднее арифметическое : 2, 3, 3, 4 =', calculations(2, 3, 3, 4))
+# print('Среднее арифметическое : 2, 3, 3, 4 =', calculations(2, 3, 3, 4))
 # ______________________________________________________________________________________________________________________
 #
+
+
 # def powerOf2(n):
 #     pow = 1
 #     for i in range(n):
@@ -4918,3 +4901,6 @@ print('Среднее арифметическое : 2, 3, 3, 4 =', calculations
 # class Line(Prop):
 #     def draw(self):
 #         print(f"Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._}")
+
+
+
