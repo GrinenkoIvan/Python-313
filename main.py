@@ -4673,7 +4673,7 @@
 # print(count_negative(data))
 
 # --------------------------------------------------------------------------------------------------
- # 13.01.2024 Домашняя работа ---------------------------------------------------------------
+# 13.01.2024 Домашняя работа ---------------------------------------------------------------
 # def decorator(func):
 #     def arithmetic(*args):
 #         print()
@@ -4902,5 +4902,59 @@
 #     def draw(self):
 #         print(f"Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._}")
 
+
+# 17.03.2024
+
+# def __lt__(self, other):
+#     if not isinstance(other, Clock):
+#         raise ArithmeticError('правый операнд должен быть типом Clock')
+#     return self.sec < other.sec
+#
+#
+# def __le__(self, other):
+#     if not isinstance(other, Clock):
+#         raise ArithmeticError('правый операнд должен быть типом Clock')
+#     return self.sec <= other.sec
+#
+#
+# def __gt__(self, other):
+#     if not isinstance(other, Clock):
+#         raise ArithmeticError('правый операнд должен быть типом Clock')
+#     return self.sec > other.sec
+#
+#
+# def __ge__(self, other):
+#     if not isinstance(other, Clock):
+#         raise ArithmeticError('правый операнд должен быть типом Clock')
+#     return self.sec >= other.sec
+#
+#
+# c1 = Clock(100)
+# c2 = Clock(200)
+# print(c1.get_format_time())
+# print(c1.get_format_time())
+#
+# print(f'c1 < c2: {c1 < c2}')
+# print(f'c2 > c1: {c2 > c1}')
+# print(f'c1 > c2: {c1 > c2}')
+# print(f'c2 < c1: {c2 < c1}')
+# # дописать от 17.03.2024
+
+# 04.02.2024 ------------- 45 пара ------------------------- файлы -----------------------------------------------------
+
+# import os
+
+# print(os.getcwd())  # путь к текущей директории(the path to the current directory)
+# print(os.listdir())  # что лежит ( список папок и файлов в директории)
+# # (what lies there (a list of folders and files in the directory))
+# print(os.listdir(".."))  # что лежит в директории на уровень выше(what lies in the directory at a higher level)
+
+# os.mkdir("folderizone")  # Создание папки(creating a folder)
+# os.makedirs("next1/next2/next3") # Создание папки с промежуточными директориями
+# (Creating a folder with intermediate directories)
+# os.remove("folderizone/folder.txt")  # удаление файла(deleting a file)
+# os.rmdir("folderizone") # удаляет
+
+# print(os.getgid() + "fdf")
 
 

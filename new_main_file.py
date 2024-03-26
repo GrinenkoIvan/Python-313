@@ -2045,75 +2045,33 @@
 # 28.01.2024 -------------------------------- Рекурсия
 
 
-# def elevator(n):
-#     if n == 0:
-#         print("Вы в подвале")
-#         return
-#     print(">>>", n)
-#     elevator(n - 1)
-#     print(n, end=" + ")  # 1 + 2 + 3 + 4 + 5 +
-#
-#
-# n1 = int(input("На каком Вы этаже: ")) # 5
-# elevator(n1)
 
 
-# def sum_list(list):
-#     res = 0
-#     for i in list:
-#         res += i
-#     return res
-#
-#
-# print(sum_list([1, 3, 5, 7, 9]))  # 25
 
 
-# def sum_list(lst):
-#     if len(lst) == 1:
-#         return lst[0]
-#     else:
-#         return lst[0] + sum_list(lst[1:])
-#
-#
-# print(sum_list([1, 3, 5, 7, 9]))
+
+names = ['Adam', ['Bob', ['Chet', ['a', 'b'], ['c', 'd'], 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill'], 'Ann']
+print(names)
 
 
-# def to_str(n, base):   #  n = 365
-#     convert = "0123456789ABCDEF"
-#     if n < base:  # 365 < 10
-#         return convert[n]
-#     else:
-#         return to_str(n // base, base) + convert[n % base]
-#
-#
-# print(to_str(365, 10)) # 365
-# print(to_str(365, 2)) # 101101101
-# print(to_str(365, 8)) # 555
-# print(to_str(365, 16)) # 16D
+print(names[0])
+print(isinstance(names[0], list))
+print(names[1])
+print(isinstance(names[1], list))
+print(names[1][1])
+print(isinstance(names[1][1], list))
+print(names[1][1][0])
+def count_iten(lst):
+    count = 0
+    for item in lst:
+        if isinstance(item, list):
+            count += count_iten(item)
+        else:
+            count += 1
+    return count
 
 
-# names = ['Adam', ['Bob', ['Chet', ['a', 'b'], ['c', 'd'], 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill'], 'Ann']
-# print(names)
-#
-#
-# # print(names[0])
-# # print(isinstance(names[0], list))
-# # print(names[1])
-# # print(isinstance(names[1], list))
-# # print(names[1][1])
-# # print(isinstance(names[1][1], list))
-# # print(names[1][1][0])
-# def count_iten(lst):
-#     count = 0
-#     for item in lst:
-#         if isinstance(item, list):
-#             count += count_iten(item)
-#         else:
-#             count += 1
-#     return count
-#
-#
-# print(count_iten(names))
+print(count_iten(names))
 
 
 # def remove(text):
@@ -2136,23 +2094,3 @@
 # f = open('test.txt', mode='r')
 # print(f)
 
-# Домашняя работа от 13.01.2024=====================================================================================
-from statistics import mean
-
-
-# def average(function):
-#
-#     def inner(*args):
-#         function(*args)
-#         print('Средне арифметическое чисел', args, '=', mean(args))
-#
-#     return inner
-#
-#
-# @average
-# def sum_of_numbers(*args):
-#     print('Сумма чисел', args, '=', sum(args))
-#     return args
-#
-#
-# sum_of_numbers(2, 3, 3, 4)
